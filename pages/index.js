@@ -10,7 +10,21 @@ import Index from 'content/Index';
 import MetaTag from 'comps/MetaTag';
 // REPO-SCSS
 
-const IndexPage = () => {
+
+export const getStaticProps = async () => {
+
+  const call_to_api = await fetch('https://pokeapi.co/api/v2/pokemon?limit=3&offset=0');
+  const fetched_data = await call_to_api.json();
+  console.log(fetched_data.results);
+  const data = fetched_data.results;
+
+  return {
+    props: {data}
+  }
+};
+
+
+const IndexPage = ({data}) => {
 
   useSnapshot(state);
 
@@ -20,7 +34,7 @@ const IndexPage = () => {
       <Head>
         <title>{state.width}px</title>
       </Head>
-      <Index/>
+      <Index data={data}/>
     </>
   );
 }
