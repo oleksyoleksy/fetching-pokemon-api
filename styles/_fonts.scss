@@ -1,0 +1,38 @@
+// https://fonts.google.com/specimen/Rubik
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Light 300, Light 300 italic, Regular 400, Regular 400 italic, Medium 500, Medium 500 italic, Semi-bold 600, Semi-bold 600 italic, Bold 700
+// font-family: 'Rubik', sans-serif;
+
+// https://fonts.google.com/specimen/Lato
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+// Thin 100, Thin 100 italic, Light 300, Light 300 italic, Regular 400, Regular 400 italic, Bold 700, Bold 700 italic, Black 900, Black 900 italic
+// font-family: 'Lato', sans-serif;
+
+// https://fonts.google.com/specimen/Source+Sans+3
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Extra-light 200, Extra-light 200 italic, Light 300, Light 300 italic, Regular 400, Regular 400 italic, Medium 500, Medium 500 italic, Semi-bold 600, Semi-bold 600 italic, Bold 700, Bold 700 italic, Extra-bold 800, Extra-bold 800 italic, Black 900, Black 900 italic
+// font-family: 'Source Sans 3', sans-serif;
+
+// https://fonts.google.com/specimen/Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Thin 100, Thin 100 italic, Extra-light 200, Extra-light 200 italic, Light 300, Light 300 italic, Regular 400, Regular 400 italic, Medium 500, Medium 500 italic, Semi-bold 600, Semi-bold 600 italic, Bold 700, Bold 700 italic, Extra-bold 800, Extra-bold 800 italic, Black 900, Black 900 italic
+// font-family: 'Montserrat', sans-serif;
+
+
+h1, h2, h3, h4, h5, h6, p, a, ol, li, label {
+  //font-family: 'Rubik', sans-serif;
+	//font-family: 'Lato', sans-serif;
+	//font-family: 'Source Sans 3', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(64, 64, 64);
+
+  // Non-standard (!!!)
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/WebKit_Extensions
+  font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // Experimental (!!!)
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+  -webkit-text-size-adjust: none; // Prevent font scaling in landscape
+}

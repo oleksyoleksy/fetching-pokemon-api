@@ -1,0 +1,28 @@
+{
+  "name": "root",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/css": "^11.7.1",
+    "color": "^4.2.1",
+    "next": "12.1.4",
+    "polished": "^4.1.4",
+    "react": "18.0.0",
+    "react-device-detect": "^2.1.2",
+    "react-dom": "18.0.0",
+    "sass": "^1.49.10",
+    "uuid": "^8.3.2",
+    "valtio": "1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4"
+  }
+}
