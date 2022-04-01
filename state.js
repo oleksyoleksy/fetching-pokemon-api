@@ -11,6 +11,9 @@ const state = proxy({
   how_many_links_in_navbar: 0, // self explanatory: counting Links in <nav>
   all_links_width_combined: 0, // I will loop through all Links and aggregate offsetWidth of each Link
   space_between_two_links: 0,
+
+  limit: 3,
+  offset: 0,
 });
 
 export {state};

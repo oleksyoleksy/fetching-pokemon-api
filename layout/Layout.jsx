@@ -108,6 +108,7 @@ const Layout = ({children}) => {
     }
     main {
       padding-top: 50px; // because in 'comps/Nav.jsx' height: 50px; (for ALL <nav> and <ul>)
+      padding-bottom: 25px;
     }
     // hide/show <header> when scrolling up/down
     // -----------------------------------------
