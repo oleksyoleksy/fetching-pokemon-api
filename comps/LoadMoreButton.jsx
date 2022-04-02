@@ -2,6 +2,7 @@
 import Link from 'next/link';
 // REACT
 // YARN
+import {useSnapshot} from 'valtio';
 // REPO-JS
 import {state} from 'state.js';
 // REPO-JSX
@@ -13,6 +14,8 @@ const LoadMoreButton = () => {
   const onClickFx = () => {
     state.limit = state.limit + 3;
   };
+
+  useSnapshot(state);
 
   return (
     <div id="loadmorebutton-jsx">
