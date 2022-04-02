@@ -6,6 +6,7 @@ import {useSnapshot} from 'valtio';
 // REPO-JS
 import {state} from 'state.js';
 // REPO-JSX
+import LoadMoreButton from 'comps/LoadMoreButton';
 // REPO-SCSS
 
 
@@ -21,6 +22,7 @@ const LoadMore = () => {
     <div id="loadmore-jsx">
       <div id="loadmore-jsx-content" className="jsx-content">
         <p>will load more here...</p>
+        <LoadMoreButton/>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import LoadMoreButton from 'comps/LoadMoreButton';
 
 const Index = ({data}) => {
 
+  state.limit = 3;
   useSnapshot(state);
 
   return (
