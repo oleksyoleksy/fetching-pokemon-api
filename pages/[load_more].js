@@ -6,7 +6,7 @@ import {useSnapshot} from 'valtio';
 // REPO-JS
 import {state} from 'state.js';
 // REPO-JSX
-//import LoadMore from 'content/LoadMore';
+import LoadMore from 'content/LoadMore';
 import MetaTag from 'comps/MetaTag';
 // REPO-SCSS
 
@@ -21,8 +21,7 @@ const LoadMorePage = () => {
       <Head>
         <title>{state.width}px</title>
       </Head>
-      {/* <LoadMore/> */}
-      <p>will load more here...</p>
+      <LoadMore/>
     </>
   );
 }
