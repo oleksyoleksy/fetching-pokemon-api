@@ -2,11 +2,6 @@
 @import 'fonts';
 @import 'ui';
 
-img {
-  width: 100px;
-}
-
-.pokemons-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 33.3vw);
+body {
+  background-color: rgba(0, 0, 0, 0.113);
 }

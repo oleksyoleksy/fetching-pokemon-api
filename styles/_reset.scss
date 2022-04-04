@@ -70,3 +70,12 @@ table {
 // http://meyerweb.com/eric/tools/css/reset/
 // RESET
 // =========================================
+
+html {
+  overflow-y: scroll; /* Show vertical scrollbar */
+  // overflow-x: scroll; /* Show horizontal scrollbar */
+	width:100vw;
+  overflow-x: hidden;
+	-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+	//background-color: rgba(240, 240, 240, 1.0);
+}
