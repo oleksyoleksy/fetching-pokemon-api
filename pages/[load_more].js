@@ -52,13 +52,25 @@ export const getStaticProps = async ({params}) => {
   //console.log(fetched_data.results);
   const data = fetched_data.results;
 
+  const images = [];
+  for (let i = 0; i < data.length; i++) {
+    const image_number = i + 1;
+    const image_url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${image_number}.png`;
+    images.push(image_url);
+  }
+
+  const pokemons_array = [];
+  for (let i = 0; i < data.length; i++) {
+    pokemons_array.push({name: `${data[i].name}`, url: `${images[i]}`});
+  }
+
   return {
-    props: {data}
+    props: {pokemons_array}
   }
 };
 
 
-const LoadMorePage = ({data}) => {
+const LoadMorePage = ({pokemons_array}) => {
 
   useSnapshot(state);
 
@@ -68,7 +80,7 @@ const LoadMorePage = ({data}) => {
       <Head>
         <title>{state.width}px</title>
       </Head>
-      <LoadMore data={data}/>
+      <LoadMore pokemons_array={pokemons_array}/>
     </>
   );
 }

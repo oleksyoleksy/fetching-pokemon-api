@@ -11,9 +11,7 @@ import LoadMoreButton from 'comps/LoadMoreButton';
 // REPO-SCSS
 
 
-const LoadMore = ({data}) => {
-
-  //console.log(data);
+const LoadMore = ({pokemons_array}) => {
 
   const { query } = useRouter();
   //console.log(query.load_more);
@@ -27,11 +25,16 @@ const LoadMore = ({data}) => {
         
         <h1>Pokémons:</h1>
 
-        {
-          data.map(i => (
-            <p key={uuidv4()}>{i.name}</p>
-          ))
-        }
+        <div className="pokemons-grid">
+          {
+            pokemons_array.map(i => (
+              <div key={uuidv4()}>
+                <img src={i.url} alt="" />
+                <p>{i.name}</p>
+              </div>
+            ))
+          }
+        </div>
 
         <LoadMoreButton/>
       </div>
