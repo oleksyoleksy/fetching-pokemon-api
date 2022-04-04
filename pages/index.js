@@ -30,6 +30,12 @@ export const getStaticProps = async () => {
   }
   //console.log(images);
 
+  const pokemons_array = [];
+  for (let i = 0; i < data.length; i++) {
+    pokemons_array.push({name: `${data[i].name}`, url: `${images[i]}`});
+  }
+  console.log(pokemons_array);
+
   return {
     props: {data, images}
   }
