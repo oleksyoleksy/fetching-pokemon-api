@@ -20,6 +20,15 @@ export const getStaticProps = async () => {
   const fetched_data = await call_to_api.json();
   //console.log(fetched_data.results);
   const data = fetched_data.results;
+  
+  //console.log(data.length);
+  const images = [];
+  for (let i = 0; i < data.length; i++) {
+    const image_number = i + 1;
+    const image_url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${image_number}.png`;
+    images.push(image_url);
+  }
+  console.log(images);
 
   return {
     props: {data}
