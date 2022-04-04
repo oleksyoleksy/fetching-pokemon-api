@@ -34,15 +34,15 @@ export const getStaticProps = async () => {
   for (let i = 0; i < data.length; i++) {
     pokemons_array.push({name: `${data[i].name}`, url: `${images[i]}`});
   }
-  console.log(pokemons_array);
+  //console.log(pokemons_array);
 
   return {
-    props: {data, images}
+    props: {pokemons_array}
   }
 };
 
 
-const IndexPage = ({data, images}) => {
+const IndexPage = ({pokemons_array}) => {
 
   useSnapshot(state);
 
@@ -52,7 +52,7 @@ const IndexPage = ({data, images}) => {
       <Head>
         <title>{state.width}px</title>
       </Head>
-      <Index data={data} images={images}/>
+      <Index pokemons_array={pokemons_array}/>
     </>
   );
 }

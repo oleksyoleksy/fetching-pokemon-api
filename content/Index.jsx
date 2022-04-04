@@ -1,6 +1,5 @@
 // NEXT
 // REACT
-//import {useEffect} from 'react';
 // YARN
 import { v4 as uuidv4 } from 'uuid';
 import {useSnapshot} from 'valtio';
@@ -11,11 +10,7 @@ import LoadMoreButton from 'comps/LoadMoreButton';
 // REPO-SCSS
 
 
-const Index = ({data, images}) => {
-
-  /* useEffect(() => {
-    console.log(images);
-	}, []); */
+const Index = ({pokemons_array}) => {
 
   state.limit = 3;
   useSnapshot(state);
@@ -26,17 +21,16 @@ const Index = ({data, images}) => {
 
         <h1>Pokémons:</h1>
 
-        {
-          images.map(i => (
-            <img key={uuidv4()} src={i} alt="" />
-          ))
-        }
-
-        {
-          data.map(i => (
-            <p key={uuidv4()}>{i.name}</p>
-          ))
-        }
+        <div className="pokemons-grid">
+          {
+            pokemons_array.map(i => (
+              <div key={uuidv4()}>
+                <img src={i.url} alt="" />
+                <p>{i.name}</p>
+              </div>
+            ))
+          }
+        </div>
 
         <LoadMoreButton/>
 
