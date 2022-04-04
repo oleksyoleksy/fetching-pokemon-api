@@ -28,15 +28,15 @@ export const getStaticProps = async () => {
     const image_url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${image_number}.png`;
     images.push(image_url);
   }
-  console.log(images);
+  //console.log(images);
 
   return {
-    props: {data}
+    props: {data, images}
   }
 };
 
 
-const IndexPage = ({data}) => {
+const IndexPage = ({data, images}) => {
 
   useSnapshot(state);
 
@@ -46,7 +46,7 @@ const IndexPage = ({data}) => {
       <Head>
         <title>{state.width}px</title>
       </Head>
-      <Index data={data}/>
+      <Index data={data} images={images}/>
     </>
   );
 }

@@ -1,5 +1,6 @@
 // NEXT
 // REACT
+import {useEffect} from 'react';
 // YARN
 import { v4 as uuidv4 } from 'uuid';
 import {useSnapshot} from 'valtio';
@@ -10,7 +11,11 @@ import LoadMoreButton from 'comps/LoadMoreButton';
 // REPO-SCSS
 
 
-const Index = ({data}) => {
+const Index = ({data, images}) => {
+
+  useEffect(() => {
+    console.log(images);
+	}, []);
 
   state.limit = 3;
   useSnapshot(state);
