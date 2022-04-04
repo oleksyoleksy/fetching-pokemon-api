@@ -27,6 +27,12 @@ const Index = ({data, images}) => {
         <h1>Pokémons:</h1>
 
         {
+          images.map(i => (
+            <img key={uuidv4()} src={i} alt="" />
+          ))
+        }
+
+        {
           data.map(i => (
             <p key={uuidv4()}>{i.name}</p>
           ))
