@@ -1,4 +1,5 @@
 // NEXT
+import Link from 'next/link';
 // REACT
 // YARN
 import { v4 as uuidv4 } from 'uuid';
@@ -24,9 +25,11 @@ const Index = ({pokemons_array}) => {
         <div className="pokemons-grid">
           {
             pokemons_array.map(i => (
-              <div key={uuidv4()}>
+              <div className="one-single-pokemon" key={uuidv4()}>
                 <img src={i.url} alt="" />
-                <p>{i.name}</p>
+                <Link href="/">
+                  <a>{i.name}</a>
+                </Link>
               </div>
             ))
           }

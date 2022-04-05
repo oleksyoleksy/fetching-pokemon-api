@@ -1,5 +1,6 @@
 // NEXT
 import { useRouter } from "next/router";
+import Link from 'next/link';
 // REACT
 // YARN
 import {useSnapshot} from 'valtio';
@@ -28,9 +29,11 @@ const LoadMore = ({pokemons_array}) => {
         <div className="pokemons-grid">
           {
             pokemons_array.map(i => (
-              <div key={uuidv4()}>
+              <div className="one-single-pokemon" key={uuidv4()}>
                 <img src={i.url} alt="" />
-                <p>{i.name}</p>
+                <Link href="/">
+                  <a>{i.name}</a>
+                </Link>
               </div>
             ))
           }

@@ -77,12 +77,15 @@ const Layout = ({children}) => {
       .pokemons-grid {
         display: grid;
         grid-template-columns: repeat(3, 200px);
-      }
-      img {
-        width: 200px;
-      }
-      p {
-        text-align: center;
+        .one-single-pokemon {
+          text-align: center;
+          img {
+            width: 200px;
+          }
+          a {
+            text-align: center;
+          }
+        }
       }
     }
   `;
@@ -105,14 +108,16 @@ const Layout = ({children}) => {
         display: grid;
         grid-template-columns: repeat(3, 32vw);
         justify-items: center;
-      }
-      img {
-        width: 25vw;
-      }
-      p {
-        text-align: center;
-        font-weight: 500;
-        font-size: 18px;
+        .one-single-pokemon {
+          text-align: center;
+          img {
+            width: 25vw;
+          }
+          a {
+            font-weight: 500;
+            font-size: 18px;
+          }
+        }
       }
     }
   `;
