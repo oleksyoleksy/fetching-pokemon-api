@@ -31,7 +31,7 @@ const LoadMore = ({pokemons_array}) => {
             pokemons_array.map(i => (
               <div className="one-single-pokemon" key={uuidv4()}>
                 <img src={i.url} alt="" />
-                <Link href="/">
+                <Link href={`/${state.limit}/${i.name}`}>
                   <a>{i.name}</a>
                 </Link>
               </div>
