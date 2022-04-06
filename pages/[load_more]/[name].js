@@ -6,7 +6,7 @@ import {useSnapshot} from 'valtio';
 // REPO-JS
 import {state} from 'state.js';
 // REPO-JSX
-//import Name from 'content/Name';
+import Name from 'content/load_more/Name';
 import MetaTag from 'comps/MetaTag';
 // REPO-SCSS
 
@@ -39,7 +39,7 @@ export const getStaticPaths = async () => {
       }});
     }
   }
-  console.log(pages_x_names);
+  //console.log(pages_x_names);
 
   return {
     paths: pages_x_names,
@@ -54,7 +54,18 @@ export const getStaticPaths = async () => {
 };
 
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async ({params}) => {
+
+  //console.log(context); // params: { load_more: '3', name: 'bulbasaur' },
+  const name = params.name;
+  //console.log(name);
+
+  const call_to_api = await fetch(
+    `https://pokeapi.co/api/v2/pokemon/${name}`
+  );
+  const fetched_data = await call_to_api.json();
+  console.log({fetched_data});
+  //const data = fetched_data.results;
 
   return {
     props: {}
@@ -72,8 +83,7 @@ const NamePage = () => {
       <Head>
         <title>{state.width}px</title>
       </Head>
-      <h1>single Pokemon will go here...</h1>
-      {/* <Name/> */}
+      <Name/>
     </>
   );
 }
