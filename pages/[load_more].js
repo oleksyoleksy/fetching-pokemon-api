@@ -26,6 +26,8 @@ export const getStaticPaths = async () => {
     //all_dynamic_urls[i] = i + 1; // 1, 2, 3, ...1126
     all_dynamic_urls[i] = { params: { load_more: i.toString() } }
   }
+
+  // reminder #2:
   //console.log(all_dynamic_urls);
 
   return {
@@ -42,7 +44,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({params}) => {
 
-  console.log(params.load_more); // 6 9 12
+  //console.log(params.load_more); // 6 9 12
 
   const url = 'https://pokeapi.co/api/v2/pokemon';
   const qs = `?limit=${params.load_more}&offset=${state.offset}`;
