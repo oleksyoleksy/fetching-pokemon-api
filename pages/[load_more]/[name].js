@@ -64,16 +64,16 @@ export const getStaticProps = async ({params}) => {
     `https://pokeapi.co/api/v2/pokemon/${name}`
   );
   const fetched_data = await call_to_api.json();
-  console.log({fetched_data});
+  //console.log(fetched_data);
   //const data = fetched_data.results;
 
   return {
-    props: {}
+    props: {fetched_data}
   }
 };
 
 
-const NamePage = () => {
+const NamePage = ({fetched_data}) => {
 
   useSnapshot(state);
 
@@ -83,7 +83,7 @@ const NamePage = () => {
       <Head>
         <title>{state.width}px</title>
       </Head>
-      <Name/>
+      <Name data={fetched_data}/>
     </>
   );
 }
