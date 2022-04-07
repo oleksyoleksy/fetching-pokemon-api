@@ -14,7 +14,7 @@ import MetaTag from 'comps/MetaTag';
 export const getStaticPaths = async () => {
 
   const call_to_api = await fetch(
-    'https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126'
+    'https://pokeapi.co/api/v2/pokemon?offset=0&limit=9'
   );
   const fetched_data = await call_to_api.json();
   //console.log(fetched_data.results.length); // 1126

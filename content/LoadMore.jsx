@@ -39,7 +39,11 @@ const LoadMore = ({pokemons_array}) => {
           }
         </div>
 
-        <LoadMoreButton/>
+        {
+          state.limit < 9 &&
+          <LoadMoreButton/>
+        }
+
       </div>
     </div>
   );
