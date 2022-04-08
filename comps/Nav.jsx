@@ -19,9 +19,11 @@ const Nav = () => {
   const ALL = css`
     a {
       text-decoration: none;
+      color: rgb(0, 136, 255);
     }
     a:hover {
-      text-decoration: underline rgb(128, 128, 128);
+      color: rgb(0, 111, 207);
+      text-decoration: underline rgb(78, 172, 255);
     }
   `;
 

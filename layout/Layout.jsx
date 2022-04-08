@@ -61,7 +61,7 @@ const Layout = ({children}) => {
       left: 0px;
       width: 100%;
       padding-top: 20px;
-      background-color: #ffff00;
+      //background-color: #ffff00;
       padding-bottom: 20px;
       nav {
         position: sticky;
