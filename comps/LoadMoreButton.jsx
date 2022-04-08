@@ -20,7 +20,10 @@ const LoadMoreButton = () => {
   return (
     <div id="loadmorebutton-jsx">
       <div id="loadmorebutton-jsx-content" className="jsx-content">
-        <Link href={`/${state.limit + 3}`}>
+        <Link href={
+          state.limit <= 6 && `/${state.limit + 3}` ||
+          state.limit > 6 && `/9`
+        }>
           <button onClick={onClickFx} className="link-like-button">
             load more
           </button>
