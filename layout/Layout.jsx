@@ -84,8 +84,33 @@ const Layout = ({children}) => {
           }
           a {
             text-align: center;
+            text-decoration: none;
+            color: rgb(0, 136, 255);
+          }
+          a:hover {
+            color: rgb(0, 111, 207);
+            text-decoration: underline rgb(78, 172, 255);
           }
         }
+      }
+      .link-like-button {
+        margin-top: 25px;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        width: 200px;
+        height: 50px;
+        border: 0px;
+        border-radius: 25px;
+        background-color: rgb(0, 152, 33);
+      }
+      .link-like-button:hover {
+        cursor: pointer;
+        background-color: rgb(3, 187, 43);
       }
     }
   `;
@@ -116,8 +141,21 @@ const Layout = ({children}) => {
           a {
             font-weight: 500;
             font-size: 18px;
+            color: rgb(0, 136, 255);
+          }
+          a:active {
+            color: rgb(0, 111, 207);
+            text-decoration: underline rgb(78, 172, 255);
           }
         }
+      }
+      .link-like-button {
+        font-weight: 500;
+        background-color: rgb(0, 152, 33);
+      }
+      .link-like-button:active {
+        cursor: pointer;
+        //background-color: rgb(3, 187, 43);
       }
     }
   `;
