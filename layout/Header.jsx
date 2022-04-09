@@ -1,6 +1,7 @@
 // NEXT
 // REACT
 // YARN
+import {cx, css} from '@emotion/css';
 // REPO-JS
 // REPO-JSX
 import Nav from 'comps/Nav';
@@ -8,8 +9,11 @@ import Nav from 'comps/Nav';
 
 const Header = () => {
 
+  const ALL = css`
+  background-color: #def9fa;`;
+
   return (
-    <header>
+    <header className={cx(ALL,)}>
       <Nav/>
     </header>
   );

@@ -107,6 +107,7 @@ const Layout = ({children}) => {
         border: 0px;
         border-radius: 25px;
         background-color: rgb(0, 152, 33);
+        margin-bottom: 50px;
       }
       .link-like-button:hover {
         cursor: pointer;

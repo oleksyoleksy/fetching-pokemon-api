@@ -13,6 +13,14 @@ import LoadMoreButton from 'comps/LoadMoreButton';
 
 const Index = ({pokemons_array}) => {
 
+  const titleCaseFx = (arg) => {
+    arg = arg.toLowerCase().split(' ');
+    for (let i = 0; i < arg.length; i++) {
+      arg[i] = arg[i].charAt(0).toUpperCase() + arg[i].slice(1); 
+    }
+    return arg.join(' ');
+  };
+
   state.limit = 3;
   useSnapshot(state);
 
@@ -28,7 +36,7 @@ const Index = ({pokemons_array}) => {
               <div className="one-single-pokemon" key={uuidv4()}>
                 <img src={i.url} alt="" />
                 <Link href={`/${state.limit}/${i.name}`}>
-                  <a>{i.name}</a>
+                  <a>{titleCaseFx(i.name)}</a>
                 </Link>
               </div>
             ))
