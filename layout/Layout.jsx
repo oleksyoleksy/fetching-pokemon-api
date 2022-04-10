@@ -138,6 +138,9 @@ const Layout = ({children}) => {
       width: 100vw;
       margin-left: 0px;
       background-color: white;
+      h1 {
+        text-align: center;
+      }
       .pokemons-grid {
         display: grid;
         grid-template-columns: repeat(3, 32vw);
@@ -165,6 +168,9 @@ const Layout = ({children}) => {
       .link-like-button:active {
         cursor: pointer;
         //background-color: rgb(3, 187, 43);
+      }
+      button {
+        margin: 0 auto;
       }
     }
   `;
