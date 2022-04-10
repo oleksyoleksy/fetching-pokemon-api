@@ -2,6 +2,7 @@
 import Link from 'next/link';
 // REACT
 // YARN
+import {isMobile} from 'react-device-detect';
 import {math} from 'polished';
 import { v4 as uuidv4 } from 'uuid';
 import {cx, css} from '@emotion/css';
@@ -31,8 +32,13 @@ const Name = ({data}) => {
 
 
   const ALL = css`
-    img {
-      width: 400px;
+    //background-color: #ffff0034;
+    #div-with-image {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 400px;
+      }
     }
     h2 {
       margin-top: 20px;
@@ -49,6 +55,9 @@ const Name = ({data}) => {
       padding-left: 5px;
       margin-right: 1px;
       background-color: #ffd900;
+    }
+    button {
+      margin: 0 auto;
     }
   `;
 
@@ -115,7 +124,8 @@ const Name = ({data}) => {
         <span className="stat-num">{i.base_stat}</span>
         {all_stats < data.stats.length ? `; ` : `. `}
         {all_stats === 3 && state.width <= phone_large && <br />}
-        {all_stats === 5 && <br />}
+        {all_stats === 4 && state.width > phone_large && <br />}
+        {all_stats === 5 && state.width <= phone_large && <br />}
       </span>
     )
   });
@@ -130,7 +140,7 @@ const Name = ({data}) => {
         {[DESKTOP]:        state.width >  laptop_large   && state.width <= desktop_large},
         {[LAPTOP]:         state.width >  tablet_large   && state.width <= laptop_large},
         {[TABLET]:         state.width >  phone_large    && state.width <= tablet_large},
-        {[PHONE]:          state.width <= phone_large},
+        {[PHONE]:          state.width <= phone_large && isMobile === true},
         {[PHONE_LARGE]:    state.width >  phone_medium   && state.width <= phone_large},
         {[PHONE_MEDIUM]:   state.width >  phone_small    && state.width <= phone_medium},
         {[PHONE_SMALL]:    state.width <= phone_small},

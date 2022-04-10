@@ -7,6 +7,12 @@ import {cx, css} from '@emotion/css';
 import {math} from 'polished';
 import {isMobile} from 'react-device-detect';
 // REPO-JS
+import {
+  desktop_small, desktop_medium, desktop_large,
+  laptop_small, laptop_medium, laptop_large,
+  tablet_small, tablet_medium, tablet_large,
+  phone_small, phone_medium, phone_large,
+} from 'breakpoints.js';
 import {state} from 'state.js';
 // REPO-JSX
 import Header from 'layout/Header';
@@ -74,6 +80,7 @@ const Layout = ({children}) => {
       position: relative;
       width: 600px;
       margin-left: ${math(`(${state.width} - 600) / 2`)}px;
+      //background-color: #ffff0034;
       .pokemons-grid {
         display: grid;
         grid-template-columns: repeat(3, 200px);
@@ -116,7 +123,7 @@ const Layout = ({children}) => {
     }
   `;
 
-  const MOB = css`
+  const PHONE = css`
     header {
       nav {
         width: 100vw;
@@ -130,6 +137,7 @@ const Layout = ({children}) => {
     main {
       width: 100vw;
       margin-left: 0px;
+      background-color: white;
       .pokemons-grid {
         display: grid;
         grid-template-columns: repeat(3, 32vw);
@@ -168,7 +176,7 @@ const Layout = ({children}) => {
   return (
     <div lang="pl" id="header-main-footer" className={cx(
       ALL,
-      {[MOB]: isMobile === true},
+      {[PHONE]: state.width <= phone_large && isMobile === true},
     )}>
       <Header/>
       <main>{children}</main>
