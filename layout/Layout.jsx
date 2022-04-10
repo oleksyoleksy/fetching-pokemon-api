@@ -123,13 +123,13 @@ const Layout = ({children}) => {
         margin-left: 10px;
         a {
           font-weight: 500;
-          font-size: 24px;
+          font-size: 16px;
         }
       }
     }
     main {
       width: 100vw;
-      margin-left: 10px;
+      margin-left: 0px;
       .pokemons-grid {
         display: grid;
         grid-template-columns: repeat(3, 32vw);
@@ -137,11 +137,11 @@ const Layout = ({children}) => {
         .one-single-pokemon {
           text-align: center;
           img {
-            width: 25vw;
+            width: 30vw;
           }
           a {
-            font-weight: 500;
-            font-size: 18px;
+            font-weight: 600;
+            font-size: 14px;
             color: rgb(0, 136, 255);
           }
           a:active {
